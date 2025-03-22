@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Series Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Test Series Portal</h1>
+
+        <section id="subject-selection" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="subject-card bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-300" data-subject="CN">
+                <h2 class="text-xl font-semibold text-gray-700">Computer Networks (CN)</h2>
+            </div>
+            <div class="subject-card bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-300" data-subject="DBMS">
+                <h2 class="text-xl font-semibold text-gray-700">Database Management Systems (DBMS)</h2>
+            </div>
+            <div class="subject-card bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-300" data-subject="SPM">
+                <h2 class="text-xl font-semibold text-gray-700">Software Project Management (SPM)</h2>
+            </div>
+            <div class="subject-card bg-white shadow-md rounded-lg p-6 cursor-pointer hover:shadow-lg transition duration-300" data-subject="SAD">
+                <h2 class="text-xl font-semibold text-gray-700">System Analysis and Design (SAD)</h2>
+            </div>
+        </section>
+
+        <section id="test-series-list" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <h2 class="col-span-full text-2xl font-semibold text-gray-800 mb-4">Test Series for <span id="selected-subject-name"></span></h2>
+            </section>
+
+        <section id="test-section" class="hidden bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Test: <span id="selected-test-name"></span></h2>
+            <div id="question-container">
+                </div>
+            <button id="submit-test-btn" class="hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Submit Test
+            </button>
+        </section>
+
+        <section id="result-section" class="hidden bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Test Result</h2>
+            <p><strong>Attempted Questions:</strong> <span id="attempted-count"></span></p>
+            <p><strong>Correct Answers:</strong> <span id="correct-count"></span></p>
+            <p><strong>Wrong Answers:</strong> <span id="wrong-count"></span></p>
+            <p><strong>Accuracy:</strong> <span id="accuracy"></span>%</p>
+            <p><strong>Total Score:</strong> <span id="total-score"></span></p>
+            <button id="back-to-subjects-btn" class="mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Back to Subjects
+            </button>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
