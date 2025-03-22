@@ -1,0 +1,25 @@
+/* Any custom styles can go here */
+.option-box {
+    @apply bg-gray-200 rounded-md p-3 mb-2 cursor-pointer hover:bg-gray-300 transition duration-200;
+}
+
+.option-box.selected {
+    @apply border-2 border-blue-500;
+}
+
+.correct-answer {
+    @apply bg-green-200 text-green-700;
+}
+
+.wrong-answer {
+    @apply bg-red-200 text-red-700 line-through;
+}
+
+.correct-animation {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0.8; transform: scale(1.05); }
+}
